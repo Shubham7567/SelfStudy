@@ -1,0 +1,16 @@
+Q7. Discuss the generation of languages.
+Ans.: There are five generation of programming languages
+-> First generation language or 1GL is low level language or machine language. 
+This language is in binary it can be understood by machine not human readable.
+
+-> Second generation language or 2GL is also low level language,like assembly language.
+This language is mostly used in kernel programming and hardware drivers. 
+This language is commonly used in video editing and video gaming
+
+-> Third generation language or 3GL is a high level language like C, C++, Java, javascript and visual basics.
+
+-> Fourth generation language or 4GL has statements simmilar to statements in human language.
+These languages are used for database programming and scripting like perl, php, python and sql.
+
+-> Fifth generation language or 5GL languages have visual tools help developing applications.
+Example of 5th generation language include Mercury, OPS5 and Prolog.

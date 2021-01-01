@@ -1,0 +1,75 @@
+
+==>Subclasses of ErrorException class
+The exceptions that are defined by the Error class and its subclasses are characterized by the fact that they
+all represent conditions that you aren’t expected to do anything about, so you aren’t expected to catch
+them. Error has three direct subclasses —ThreadDeath, LinkageError, and VirtualMachineError:
+->The first of these sounds the most serious, but in fact it isn’t. A ThreadDeath exception is thrown
+whenever an executing thread is deliberately stopped, and for the thread to be destroyed prop-
+erly, you should not catch this exception. In some circumstances you might want to catch it —
+for clean-up operations, for example — in which case you must be sure to rethrow the exception
+to allow the thread to die peacefully. When a ThreadDeath exception is thrown and not caught,
+it’s the thread that ends, not the program. I will deal with threads in detail in Chapter 16.
+
+->The LinkageError exception class has subclasses that record serious errors with the classes
+in your program. Incompatibilities between classes or attempting to create an object of a non-
+existent class type are the sorts of things that cause these exceptions to be thrown.
+
+->The VirtualMachineError class has four subclasses that specify exceptions that will be
+thrown when a catastrophic failure of the Java Virtual Machine occurs. You aren’t prohibited
+from trying todeal with these exceptions, but in general, there’s little point in attempting to
+catch them.
+
+==>Subclasses of Runtime exception:
+->The subclasses of Runtime exception in java.lang standard package are:
+1) Arithmatic exception: When you attempt to apply invalid arithmatic condition like devide by zero.
+2) IndexOutOfBoundException: When we apply index which larger than array size.
+3) NegativeArraySizeException: When we intialize array with negative size.
+4) NullPointerException: When you are using object which contain null instead of instance of any class.
+5) ArrayStoreException: When you try to create array of a class or data type which is not permitted to declare as an array.
+6) ClassCastException: You've tried to cast an object to an invalid type the object isn't of the class specified, nor it is subclass or 
+superclass of specified class.
+7) IllegalArgumentException: You've passed an argument to a method that doesn't correspond to the parameter type.
+8) IOException: Any uncertain codition arises in input output operation.
+9) FileNotFoundException: When you are trying to access file which does not exist.
+
+==>Exception handling:
+-> If you want to handle any exception, you have to include three code blocks try, catch and finally bock.
+
+=> Try block: try block encloses the code that throw any exception. Any code that can throw any exception must be anclosed
+in try block.
+
+try{
+    //statement may generate exception
+}
+
+=> Catch block: Catch block encloses the code that handle the exception. It caches the exception and display appropriate message.
+You can not put a catch block without a try block and you can access any number of catch block with a try block.
+
+catch(exception exc){
+    exc.printStackTrace(System.err);
+}
+
+=> finally block: If you want to execute any code whether the exception will be handled or not, then you need to put it in finally block.
+Code enclosed in finally block will execute in the end of the execution of the method wether the exception is handeled or not.
+
+finally{
+    //code must be executed
+}
+
+
+Throwable Class:
+-> Throwable class is the class from which all the exception classes are derived.
+-> That is every object of exception class can use the methods defined in this class.
+-> There are two constructors of the throwable class one default constructor and other constructor which takes string as input parameter
+to generate the message.
+-> The methods of throwable class are:
+
+1) getMessage() : This method returns the message describe the content of the message. This will typically be the fully qualified name of
+the exception class and brief description of the class.
+
+2) printStackTrace() : This method is used to return message and complete stack trace of the exception class in the output stream and
+screen will be the output in the console program.
+
+3) printStackTrace(PrintStream s): This method is just like the previous method except that the you can specify the output stream as an
+argument.
+e.printStackTrace(System.err);

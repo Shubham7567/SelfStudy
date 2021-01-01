@@ -1,0 +1,61 @@
+=> Stream:
+-> Java uses stream concept to represent an ordered sequence of data, common characteristic shared by all the input output devices.
+-> A stream  represent uniform, easy to use, object oriented interface between program and input/output devices.
+-> A stream in java is a path along which data flow.
+-> It has a source and destination.
+-> Both the source and destination can be device or file or another stream in the same program.
+-> Transfering data from one stream to another makes the stream more powerful tool in java for building more complex file processing.
+-> We can use multiple stream to build more complex file processing.
+
+=> Stream classes:
+-> Java provides various stream class to read and write data on files.
+-> These stream  classes are chategorized by the data types they use
+--> Byte Stream classes use bytes to perform input/output operations on files.
+--> Character Stream classes use Character to perform input/output on files.
+
+a)=> Byte Stream Class:
+-> Byte stream classes are used to perform input/output operation by using 8 bit bytes.
+-> Since the streams are unidirectional java provides two kinds of byte stream classes
+
+1) Input Stream Classes:
+-> Input stream classes are designed to perform input operations on files.
+-> Input stream class is an abstract class so we can not instentiate it.
+-> Rather we can use the classes derived from it.
+-> Input stream class has subclasses like fileinputstream, bytearrayinputstream, objectinputstream,pipinputstream etc.
+-> Input stream class has methods to perform the following tasks
+Reading bytes
+Closing streams
+Making partition in streams
+Find total number of bytes in stream
+Find array of bytes in streams
+-> The methods provided by inputStreamClasses are:
+read() -> read single byte from file
+read(byte[] b) - > read bytes in byte array b from the file
+read(byte[] b, int n, int m) -> read m bytes from nth byte in byte array b
+skip(int n) -> skip n bytes in a stream
+reset() -> go back to the start of the input stream
+
+2)Output Stream Classes:
+-> Output stream classes are designed to writes bytes in files.
+-> Output stream is an abstract class just like InputStreamClasse so we can not instentiate it.
+-> We can use the subclasses of OutputStream Class.
+-> Output stream classes define the following methods
+write() -> write one byte in the file
+write(byte[] b) -> write the byte array in the output stream
+write(byte[] b, int n, int m) -> write m bytes from nth byth from byte array to stream
+close() -> close the streams
+
+b)=> Character Stream Classes:
+-> Character stream classes are designed to handle characters.
+-> Charater stream classes are also devided in two kinds reader classes and writer classes.
+
+1) Reader Classes:
+-> Reader class is an absrtact class like inputStream Class, so we can not instentiate it but we can use subclasses of reader class
+-> Reader class has subclasses like FileReader, BufferedReader, StringReader,PipReader etc.
+-> Reader class has methods identical to InputStream class to perfrom input operation but Input stream class use byte as their unit of
+information, And Reader class use characters.
+
+2) Writer classes:
+-> Writer class is an abstract class like OutputStream class.
+-> Writer class also has subclasses of it like StringWriter, BufferedWriter, FileWriter etc.
+-> Writer class have methods identical to Output Stream classes except output stream classes use bytes and writer classes use characters.

@@ -1,0 +1,3 @@
+--> Byte Stream classes use bytes to perform input/output operations on files.
+a)=> Byte Stream Class:
+-> Byte stream classes are used to perform input/output operation by using 8 bit bytes.
